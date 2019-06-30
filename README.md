@@ -1,21 +1,21 @@
 
- messagesテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text| foreign_key: true|
-|image|string| foreign_key: true|
+|body|text| |
+|image|string| |
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 |timestamp|timestamp||
 
 ### Association
-- belongs_to :user_group
+- belongs_to :members
  
 
 
 
- membersテーブル
+##users_groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -30,7 +30,7 @@
 - has_many :messages, 
 
 
- groupテーブル
+##groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -39,10 +39,11 @@
 ### Association
 - has_many :users_groups, dependent: :
 - has_many :users, through: :users_groups
+- belongs_to :users
 
 
 
- userテーブル
+##usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -53,3 +54,4 @@
 ### Association
 - has_many :users_groups, dependent: :
 - has_many :groups, through: :users_groups
+- has_many :groups

@@ -7,7 +7,6 @@
 |image|string| |
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|timestamp|timestamp||
 
 ### Association
 - belongs_to :user
@@ -32,7 +31,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
+|name|string|null: false|
 
 ### Association
 - has_many :users_groups, 
@@ -45,9 +44,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
-|password|string|null: false, |
-|email|string|null: false, Addindex|
+|name|string|null: false|
 
 ### Association
 - has_many :users_groups, 

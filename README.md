@@ -15,7 +15,7 @@
 
 
 
-##users_groupsテーブル
+## users_groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -30,7 +30,7 @@
 - has_many :messages, 
 
 
-##groupsテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -43,7 +43,7 @@
 
 
 
-##usersテーブル
+## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|

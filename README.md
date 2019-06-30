@@ -10,7 +10,8 @@
 |timestamp|timestamp||
 
 ### Association
-- belongs_to :members
+- belongs_to :user
+- belongs_to :group
  
 
 
@@ -19,15 +20,12 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|null: false, foreign_key: true|
-|group_name|string|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
-- has_many :messages, 
 
 
 ## groupsテーブル
@@ -37,9 +35,9 @@
 |name|string|null: false, foreign_key: true|
 
 ### Association
-- has_many :users_groups, dependent: :
+- has_many :users_groups, 
 - has_many :users, through: :users_groups
-- belongs_to :users
+- has_many :messages
 
 
 
@@ -52,6 +50,6 @@
 |email|string|null: false, Addindex|
 
 ### Association
-- has_many :users_groups, dependent: :
+- has_many :users_groups, 
 - has_many :groups, through: :users_groups
-- has_many :groups
+- has_many :messages

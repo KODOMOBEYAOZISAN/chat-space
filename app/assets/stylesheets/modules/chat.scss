@@ -1,3 +1,7 @@
+a {
+  color: $light_blue;
+}
+
 .chat {
   width: calc(100% - 300px);
   .header {
@@ -24,14 +28,12 @@
     }
     .right-header {
       border: 1px solid $light_blue;
-      color: $light_blue;
       float: right;
       height: 40px;
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
       &__button {
-        color: $light_blue;
         text-decoration: none;
       }
     }
@@ -41,8 +43,10 @@
     background-color: #FAFAFA;
     box-sizing: border-box;
     padding: 46px 40px 0;
-    height: calc(100% - 100px - 90px);
+    height: calc(100vh - 100px - 90px);
+    overflow: scroll;
     .message {
+      padding-bottom: 40px;
       .upper-message {
         display: flex;
         &__user-name {
@@ -73,6 +77,8 @@
     height: 90px;
     padding: 20px 50px 20px 40px;
     &__message {
+      box-sizing: border-box;
+      padding-left: 10px;
       border: none;
       float: left;
       height: 50px;
